@@ -1,0 +1,15 @@
+TECHNOVA IT SUPPORT RUNBOOK
+Topic: Network Troubleshooting
+
+For employees experiencing network connectivity problems:
+
+1. Check whether other websites or internal applications are accessible.
+2. Verify Wi-Fi or Ethernet connectivity.
+3. Disconnect and reconnect to the network.
+4. Restart the network adapter if required.
+5. Restart the computer.
+6. Check whether other employees in the same location are experiencing the same issue.
+
+If multiple employees are affected, the issue should be treated as a potential network incident and escalated to the Network Operations team.
+
+If only one employee is affected, continue individual troubleshooting before escalating.

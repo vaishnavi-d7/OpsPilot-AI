@@ -1,0 +1,20 @@
+TECHNOVA IT SUPPORT RUNBOOK
+Topic: VPN Troubleshooting
+
+The corporate VPN is required when employees access internal company resources from outside the office network.
+
+Common VPN connection issues may be caused by incorrect credentials, expired passwords, unstable internet connections, outdated VPN clients, or temporary VPN service problems.
+
+Basic troubleshooting steps:
+
+1. Verify that the employee has an active internet connection.
+2. Confirm that the employee is using the official corporate VPN client.
+3. Verify the username and password.
+4. Check whether the employee's password has expired.
+5. Restart the VPN client.
+6. Restart the computer if the issue continues.
+7. Check whether the VPN client requires an update.
+
+If the VPN still does not connect after these steps, the issue should be escalated to the Network Support team.
+
+Do not request or store the employee's password.

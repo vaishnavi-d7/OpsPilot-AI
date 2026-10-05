@@ -1,0 +1,12 @@
+import os
+from dotenv import load_dotenv
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
+
+load_dotenv()
+
+def create_embedding_model():
+    return GoogleGenerativeAIEmbeddings(
+        model="models/gemini-embedding-001"
+    )
+
+model = create_embedding_model()

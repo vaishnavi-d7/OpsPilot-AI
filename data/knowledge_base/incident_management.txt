@@ -1,0 +1,24 @@
+TECHNOVA IT INCIDENT MANAGEMENT POLICY
+Topic: Incident Priority and Escalation
+
+Priority P1:
+A critical business service is unavailable or a major security incident is suspected.
+
+P1 incidents must be escalated immediately to the appropriate incident response team.
+
+Priority P2:
+A significant business function is affected, but a workaround may exist.
+
+P2 incidents should be escalated promptly to the responsible technical team.
+
+Priority P3:
+A normal individual user issue with limited business impact.
+
+P3 incidents can normally follow standard Service Desk procedures.
+
+Priority P4:
+A low-impact request, information request, or minor issue.
+
+P4 requests can be handled through normal support workflows.
+
+If an issue indicates a possible security incident, it must be escalated to the Security team rather than handled only as a normal technical support request.

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OpsPilot - Ticket Dashboard</title>
+
+    <link rel="stylesheet" href="/static/tickets.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🎫 Support Tickets</h1>
+                <p>OpsPilot IT Operations Dashboard</p>
+            </div>
+
+            <a href="/app" class="back-btn">
+                ← Back to OpsPilot
+            </a>
+
+        </header>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total Tickets</span>
+                <strong id="totalTickets">0</strong>
+            </div>
+
+            <div class="stat-card open">
+                <span>Open</span>
+                <strong id="openTickets">0</strong>
+            </div>
+
+            <div class="stat-card progress">
+                <span>In Progress</span>
+                <strong id="progressTickets">0</strong>
+            </div>
+
+            <div class="stat-card resolved">
+                <span>Resolved</span>
+                <strong id="resolvedTickets">0</strong>
+            </div>
+
+        </section>
+
+
+        <section class="ticket-section">
+
+            <div class="section-header">
+
+                <h2>All Tickets</h2>
+
+                <button id="refreshBtn">
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Ticket ID</th>
+                            <th>Issue</th>
+                            <th>Category</th>
+                            <th>Severity</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="ticketTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div id="emptyMessage">
+                No support tickets found.
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="/static/tickets.js"></script>
+
+</body>
+
+</html>

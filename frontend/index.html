@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>OpsPilot AI</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+
+        <!-- ========================= -->
+        <!-- HEADER -->
+        <!-- ========================= -->
+
+        <header class="header">
+
+            <div class="brand">
+
+                <div class="logo">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <h1>
+                        OpsPilot AI
+                    </h1>
+
+                    <p>
+                        AI IT Operations & Support Agent
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    id="ticketsBtn"
+                    class="ticket-nav-btn"
+                >
+                    🎫 Tickets
+                </button>
+
+
+                <div class="status">
+
+                    <span></span>
+
+                    Online
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ========================= -->
+        <!-- CHAT AREA -->
+        <!-- ========================= -->
+
+        <main
+            class="chat-area"
+            id="chatArea"
+        >
+
+
+            <!-- WELCOME -->
+
+            <div
+                class="welcome"
+            >
+
+                <div class="welcome-icon">
+                    ⚡
+                </div>
+
+
+                <h2>
+                    How can I help you?
+                </h2>
+
+
+                <p>
+                    Ask me about IT issues, troubleshooting, or support.
+                </p>
+
+
+                <!-- SUGGESTIONS -->
+
+                <div class="suggestions">
+
+
+                    <button>
+                        My VPN is not connecting
+                    </button>
+
+
+                    <button>
+                        I can't reset my password
+                    </button>
+
+
+                    <button>
+                        My software installation failed
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CHAT MESSAGES -->
+
+            <div
+                id="messages"
+                class="messages"
+            >
+
+            </div>
+
+
+        </main>
+
+
+
+        <!-- ========================= -->
+        <!-- TICKET DASHBOARD -->
+        <!-- IMPORTANT: OUTSIDE chatArea -->
+        <!-- ========================= -->
+
+        <section
+            id="ticketDashboard"
+            class="ticket-dashboard"
+            style="display: none;"
+        >
+
+
+            <div class="ticket-dashboard-header">
+
+
+                <div>
+
+                    <h2>
+                        🎫 Support Tickets
+                    </h2>
+
+                    <p>
+                        View and track your support requests
+                    </p>
+
+                </div>
+
+
+                <div class="ticket-actions">
+
+
+                    <button
+                        id="backToChatBtn"
+                        class="ticket-action-btn"
+                    >
+                        ← Chat
+                    </button>
+
+
+                    <button
+                        id="refreshTicketsBtn"
+                        class="ticket-action-btn"
+                    >
+                        ↻ Refresh
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ========================= -->
+            <!-- TICKET STATISTICS -->
+            <!-- ========================= -->
+
+            <div class="ticket-stats">
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Total Tickets
+                    </span>
+
+                    <strong id="totalTickets">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Open Tickets
+                    </span>
+
+                    <strong id="openTickets">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <span>
+                        High Priority
+                    </span>
+
+                    <strong id="highTickets">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ========================= -->
+            <!-- TICKET LIST -->
+            <!-- ========================= -->
+
+            <div
+                id="ticketList"
+                class="ticket-list"
+            >
+
+                <div class="no-tickets">
+                    Loading tickets...
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- INPUT AREA -->
+        <!-- ========================= -->
+
+        <div
+            class="input-area"
+            id="inputArea"
+        >
+
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Describe your IT issue..."
+            >
+
+
+            <button
+                id="sendBtn"
+            >
+                ➤
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ========================= -->
+        <!-- FOOTER -->
+        <!-- ========================= -->
+
+        <div class="footer">
+
+            OpsPilot AI • Intelligent IT Support
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- CREATE TICKET MODAL -->
+    <!-- ========================= -->
+
+    <div
+        id="ticketModal"
+        class="ticket-modal"
+    >
+
+
+        <div class="ticket-box">
+
+
+            <!-- MODAL HEADER -->
+
+            <div class="ticket-header">
+
+
+                <h2>
+                    🎫 Create Support Ticket
+                </h2>
+
+
+                <button
+                    id="closeTicketBtn"
+                >
+                    ×
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ISSUE -->
+
+            <label for="ticketIssue">
+                Issue
+            </label>
+
+
+            <textarea
+                id="ticketIssue"
+                placeholder="Describe your issue..."
+            ></textarea>
+
+
+
+            <!-- CATEGORY -->
+
+            <label for="ticketCategory">
+                Category
+            </label>
+
+
+            <select
+                id="ticketCategory"
+            >
+
+
+                <option value="IT Support">
+                    IT Support
+                </option>
+
+
+                <option value="Network">
+                    Network
+                </option>
+
+
+                <option value="Software">
+                    Software
+                </option>
+
+
+                <option value="Security">
+                    Security
+                </option>
+
+
+                <option value="Hardware">
+                    Hardware
+                </option>
+
+
+            </select>
+
+
+
+            <!-- SEVERITY -->
+
+            <label for="ticketSeverity">
+                Severity
+            </label>
+
+
+            <select
+                id="ticketSeverity"
+            >
+
+
+                <option value="Low">
+                    Low
+                </option>
+
+
+                <option
+                    value="Medium"
+                    selected
+                >
+                    Medium
+                </option>
+
+
+                <option value="High">
+                    High
+                </option>
+
+
+                <option value="Critical">
+                    Critical
+                </option>
+
+
+            </select>
+
+
+
+            <!-- CREATE BUTTON -->
+
+            <button
+                id="createTicketBtn"
+            >
+                Create Ticket
+            </button>
+
+
+
+            <!-- RESULT -->
+
+            <div
+                id="ticketResult"
+            >
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script src="/static/script.js"></script>
+
+
+</body>
+
+</html>

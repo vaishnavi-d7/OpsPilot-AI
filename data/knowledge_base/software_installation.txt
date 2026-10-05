@@ -1,0 +1,17 @@
+TECHNOVA IT SUPPORT POLICY
+Topic: Software Installation
+
+Employees must use the approved company software catalog when installing business applications.
+
+Applications that are not available in the approved catalog require an IT software request.
+
+Software requests should include:
+
+- Application name
+- Business purpose
+- Required version
+- Manager approval when required
+
+Employees must not install unauthorized or pirated software on company devices.
+
+Security-sensitive applications may require additional approval from the Security team.

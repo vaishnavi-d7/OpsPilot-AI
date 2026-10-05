@@ -1,0 +1,17 @@
+TECHNOVA IT SUPPORT RUNBOOK
+Topic: Corporate Email Troubleshooting
+
+Employees who cannot send or receive corporate email should first verify their internet connection.
+
+Basic troubleshooting steps:
+
+1. Verify internet connectivity.
+2. Check whether the corporate email service is experiencing a known outage.
+3. Restart the email application.
+4. Verify that the mailbox is not full.
+5. Check whether the employee can access email through the official webmail portal.
+6. Restart the computer if necessary.
+
+If webmail works but the desktop email application does not work, the issue should be escalated to the Endpoint Support team.
+
+If both webmail and the desktop application are unavailable, escalate the issue to the Messaging Support team.
